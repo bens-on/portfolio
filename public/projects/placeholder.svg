@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="50%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#A78BFA" />
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0 H0 V32" fill="none" stroke="#ffffff" stroke-opacity="0.08" />
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#0B1020" />
+  <rect width="800" height="400" fill="url(#grid)" />
+  <g opacity="0.8">
+    <circle cx="120" cy="80" r="140" fill="url(#grad)" opacity="0.18" />
+    <circle cx="700" cy="320" r="160" fill="url(#grad)" opacity="0.15" />
+  </g>
+  <rect x="40" y="40" width="720" height="320" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.12" />
+  <g transform="translate(400,200)" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system" fill="#ffffff">
+    <text font-size="20" fill="#E5E7EB" opacity="0.9">Project Image Placeholder</text>
+    <text y="28" font-size="14" fill="#9CA3AF" opacity="0.9">Replace with a screenshot or cover image</text>
+  </g>
+</svg>
+
