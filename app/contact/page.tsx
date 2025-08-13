@@ -1,12 +1,11 @@
 import BackLink from "@/components/BackLink";
-import Link from "next/link";
 
 export default function ContactPage() {
   return (
     <main className="mx-auto max-w-4xl p-6 sm:p-10">
       <h1 className="text-3xl font-semibold tracking-tight">Contact</h1>
       <p className="mt-2 text-lg text-foreground/80">
-        I'm always interested in new opportunities in embedded systems or RF for aerospace and defense.
+        I&apos;m always interested in new opportunities in embedded systems or RF for aerospace and defense.
       </p>
       
       <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -17,7 +16,7 @@ export default function ContactPage() {
             <div>
               <h3 className="font-medium text-foreground">Current Status</h3>
               <p className="text-sm text-foreground/80">Senior Electrical Engineering Student</p>
-              <p className="text-sm text-foreground/80">Accelerated Master's Program (MSEE exp 2027)</p>
+              <p className="text-sm text-foreground/80">Accelerated Master&apos;s Program (MSEE exp 2027)</p>
               <p className="text-sm text-foreground/80">Colorado State University</p>
             </div>
             
@@ -125,7 +124,7 @@ export default function ContactPage() {
       <div className="mt-12 p-6 bg-foreground/5 rounded-xl border border-foreground/10">
         <h2 className="text-lg font-semibold tracking-tight mb-2">Interested in Working Together?</h2>
         <p className="text-foreground/80 mb-4">
-          I'm particularly interested in opportunities in embedded systems and RF for aerospace applications. 
+          I&apos;m particularly interested in opportunities in embedded systems and RF for aerospace applications. 
           Feel free to reach out for collaborations, general inquiry, or to learn more about my background.
         </p>
         <div className="flex flex-wrap gap-3">
