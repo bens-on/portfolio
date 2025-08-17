@@ -27,7 +27,7 @@ export default function USLIPage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-4">Overview</h3>
         <p className="text-foreground/80 leading-relaxed">
-          Leading a 4-member payload team in CSU's NASA USLI program. The project involves designing a 
+          Leading a 4-member payload team in CSU&apos;s NASA USLI program. The project involves designing a 
           deployable system to collect and analyze a soil sample during a March 2026 L2 rocket launch.
         </p>
       </section>
@@ -121,7 +121,7 @@ export default function USLIPage() {
                 className="object-cover"
               />
             </div>
-            <p className="text-sm text-foreground/60 text-center">Rocket from last year's team</p>
+            <p className="text-sm text-foreground/60 text-center">Rocket from last year&apos;s team</p>
           </div>
         </div>
       </section>

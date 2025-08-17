@@ -27,7 +27,7 @@ export default function CSULAExperiencePage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-4">Overview</h3>
         <p className="text-foreground/80 leading-relaxed">
-          Served as a Learning Assistant for CSU's introductory digital logic course, supporting students 
+          Served as a Learning Assistant for CSU&apos;s introductory digital logic course, supporting students 
           in foundational circuit design.
         </p>
       </section>
