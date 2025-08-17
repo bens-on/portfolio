@@ -2,7 +2,6 @@ import Hero from "@/components/Hero";
 import AnimatedNav from "@/components/AnimatedNav";
 import ProjectCard, { Project } from "@/components/ProjectCard";
 import ExperienceCard, { Experience } from "@/components/ExperienceCard";
-import Link from "next/link";
 
 const sampleProjects: Project[] = [
   {
