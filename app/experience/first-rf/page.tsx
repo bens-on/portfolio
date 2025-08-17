@@ -1,24 +1,25 @@
 import BackLink from "@/components/BackLink";
 import Image from "next/image";
 
-export default function AutomatedGreenhousePage() {
+export default function FirstRFExperiencePage() {
   return (
     <main className="mx-auto max-w-4xl p-6 sm:p-10">
       <BackLink />
       
       {/* Header */}
       <div className="mt-8 mb-12">
-        <h1 className="text-3xl font-bold tracking-tight mb-2">Automated Greenhouse</h1>
-        <h2 className="text-xl font-semibold text-foreground/80 mb-1">Vertically Integrated Project (VIP)</h2>
-        <p className="text-foreground/60 mb-4">Fall 2024 | Colorado State University</p>
+        <h1 className="text-3xl font-bold tracking-tight mb-2">FIRST RF</h1>
+        <h2 className="text-xl font-semibold text-foreground/80 mb-1">Embedded Systems Engineering Intern</h2>
+        <p className="text-foreground/60 mb-4">May 2025 – Aug 2025 | Boulder, CO</p>
         
-        {/* Project Image */}
-        <div className="relative h-48 w-full rounded-xl overflow-hidden mb-8">
+        {/* Company Image */}
+        <div className="relative w-full rounded-xl overflow-hidden mb-8">
           <Image
-            src="/projects/AG3.jpeg"
-            alt="Automated Greenhouse"
-            fill
-            className="object-cover"
+            src="/projects/interns_ffrange.jpeg"
+            alt="FIRST RF"
+            width={1200}
+            height={800}
+            className="w-full h-auto"
           />
         </div>
       </div>
@@ -27,8 +28,8 @@ export default function AutomatedGreenhousePage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-4">Overview</h3>
         <p className="text-foreground/80 leading-relaxed">
-          Worked on a multidisciplinary project to design and implement an automated greenhouse system 
-          capable of monitoring and controlling environmental parameters for optimal plant growth.
+          At FIRST RF, I worked on embedded systems for a half-duplex phased array system enabling land and maritime connectivity. 
+          My role bridged RF hardware, embedded software, and RF engineering fundamentals to deliver a working system.
         </p>
       </section>
 
@@ -37,25 +38,27 @@ export default function AutomatedGreenhousePage() {
         <h3 className="text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-6">
           <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
-            <h4 className="font-semibold mb-2">Electrical System Redesign</h4>
+            <h4 className="font-semibold mb-2">Phased Array Communication System</h4>
             <p className="text-foreground/80">
-              Evaluated and redesigned the original electrical control system for safety, efficiency, and documentation.
+              Co-developed a phased array communication system for military grade platforms.
             </p>
           </div>
           
           <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
-            <h4 className="font-semibold mb-2">System Implementation</h4>
+            <h4 className="font-semibold mb-2">PCB Design & Signal Integrity</h4>
             <p className="text-foreground/80">
-              Implemented the improved control system in the second iteration of the greenhouse project.
+              Designed multilayer PCB layouts in Altium, performing transmission-line calculations and 
+              stackup tuning to ensure GHz-range signal integrity.
             </p>
           </div>
           
           <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
-            <h4 className="font-semibold mb-2">Team Collaboration</h4>
+            <h4 className="font-semibold mb-2">Embedded Software Development</h4>
             <p className="text-foreground/80">
-              Collaborated with a cross-functional team, contributing 1–3 hours per week throughout the semester.
+              Authored cross-platform SPI drivers in C for Zephyr RTOS to control active RF components.
             </p>
           </div>
+          
         </div>
       </section>
 
@@ -63,8 +66,8 @@ export default function AutomatedGreenhousePage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-4">Impact</h3>
         <p className="text-foreground/80 leading-relaxed">
-          Delivered a safer, more reliable electrical design for long-term use in greenhouse automation, 
-          laying the foundation for scalable environmental control systems.
+          Strengthened experience in RF systems and embedded development, while improving workflows 
+          for both hardware and software integration.
         </p>
       </section>
 
@@ -73,11 +76,13 @@ export default function AutomatedGreenhousePage() {
         <h3 className="text-xl font-semibold mb-4">Skills</h3>
         <div className="flex flex-wrap gap-3">
           {[
-            "Control Systems",
-            "Electrical Design", 
-            "Documentation",
-            "Embedded Systems",
-            "Environmental Monitoring"
+            "RF Engineering",
+            "Embedded Systems", 
+            "PCB Design",
+            "Altium",
+            "Python",
+            "Zephyr RTOS",
+            "SPI"
           ].map((skill) => (
             <span
               key={skill}
@@ -89,36 +94,34 @@ export default function AutomatedGreenhousePage() {
         </div>
       </section>
 
-      {/* Project Images */}
+      {/* Experience Images */}
       <section className="mb-12">
-        <h3 className="text-xl font-semibold mb-6">Project Photos</h3>
+        <h3 className="text-xl font-semibold mb-6">Experience Photos</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <div className="relative h-64 rounded-xl overflow-hidden bg-foreground/5 border border-foreground/10">
               <Image
-                src="/projects/AG2.png"
-                alt="Automated Greenhouse System"
+                src="/projects/footprint.jpeg"
+                alt="FIRST RF Work Environment"
                 fill
                 className="object-cover"
               />
             </div>
-            <p className="text-sm text-foreground/60 text-center">Automated greenhouse opened to show bare internals.</p>
+            <p className="text-sm text-foreground/60 text-center">Footprint of component that we used in component specific boards in testing RF qualities.</p>
           </div>
           <div className="space-y-2">
             <div className="relative h-64 rounded-xl overflow-hidden bg-foreground/5 border border-foreground/10">
               <Image
-                src="/projects/AG4.jpeg"
-                alt="Greenhouse Control System"
+                src="/projects/testing.jpeg"
+                alt="RF Engineering Work"
                 fill
                 className="object-cover"
               />
             </div>
-            <p className="text-sm text-foreground/60 text-center">3D Printed Crop Cups to hold rockwool.</p>
+            <p className="text-sm text-foreground/60 text-center">Testing setup for a high power amplifier.</p>
           </div>
         </div>
       </section>
     </main>
   );
 }
-
-

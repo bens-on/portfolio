@@ -11,8 +11,8 @@ type AnimatedNavProps = {
 
 export default function AnimatedNav({ items }: AnimatedNavProps) {
   return (
-    <nav className="relative w-full">
-      <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <nav className="relative w-full flex justify-center">
+      <ul className="grid grid-cols-2 gap-3 w-full max-w-lg">
         {items.map((item) => (
           <li key={item.href}>
             <Link

@@ -24,12 +24,12 @@ export default function Hero({ name, title, subtitle, headshotSrc }: HeroProps) 
             </p>
           )}
         </div>
-        <div className="relative size-40 sm:size-48 lg:size-65 shadow-xl overflow-hidden">
+        <div className="relative size-40 sm:size-48 lg:size-65 shadow-xl overflow-hidden rounded-full">
           <Image
             src={headshotSrc}
             alt={`${name} headshot`}
             fill
-            className="object-cover"
+            className="object-contain"
             sizes="(max-width: 640px) 176px, (max-width: 1024px) 208px, 240px"
             priority
           />
