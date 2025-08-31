@@ -3,22 +3,24 @@ import Image from "next/image";
 
 export default function USLIPage() {
   return (
-    <main className="mx-auto max-w-4xl p-6 sm:p-10">
+    <main className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-10 py-6 sm:py-10">
       <BackLink />
       
       {/* Header */}
       <div className="mt-8 mb-12">
-        <h1 className="text-3xl font-bold tracking-tight mb-2">NASA University Student Launch Initiative (USLI)</h1>
-        <h2 className="text-xl font-semibold text-foreground/80 mb-1">Payload Team Lead – Senior Design Project</h2>
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">NASA University Student Launch Initiative (USLI)</h1>
+        <h2 className="text-lg sm:text-xl font-semibold text-foreground/80 mb-1">Payload Team Lead – Senior Design Project</h2>
         <p className="text-foreground/60 mb-4">Fall 2025 – Spring 2026 | Colorado State University</p>
         
         {/* Project Image */}
-        <div className="relative h-48 w-full rounded-xl overflow-hidden mb-8">
+        <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-8 bg-gradient-to-br from-background/90 to-background/70 border border-foreground/10">
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/5 to-transparent"></div>
           <Image
             src="/projects/rocket-model.png"
             alt="NASA USLI Payload"
             fill
-            className="object-cover"
+            className="object-contain p-4 relative z-10"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px"
           />
         </div>
       </div>
@@ -102,23 +104,25 @@ export default function USLIPage() {
         <h3 className="text-xl font-semibold mb-6">Project Photos</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <div className="relative h-64 rounded-xl overflow-hidden bg-foreground/5 border border-foreground/10">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-foreground/5 border border-foreground/10">
               <Image
                 src="/projects/USLI-subscale-schematic.jpeg"
                 alt="USLI Subscale Schematic"
                 fill
-                className="object-cover"
+                className="object-contain p-2"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
               />
             </div>
             <p className="text-sm text-foreground/60 text-center">Schematic for the subscale project</p>
           </div>
           <div className="space-y-2">
-            <div className="relative h-64 rounded-xl overflow-hidden bg-foreground/5 border border-foreground/10">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-foreground/5 border border-foreground/10">
               <Image
                 src="/projects/usli-legacy-fullscale.jpeg"
                 alt="USLI Legacy Full Scale"
                 fill
-                className="object-cover"
+                className="object-contain p-2"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
               />
             </div>
             <p className="text-sm text-foreground/60 text-center">Rocket from last year&apos;s team</p>

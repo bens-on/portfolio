@@ -80,33 +80,33 @@ const sampleExperiences: Experience[] = [
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen">
+    <div className="font-serif min-h-screen">
       <Hero
         name="Alex Benson"
         title="Senior Electrical Engineering Student at Colorado State University"
         subtitle="Aspiring Embedded Systems Engineer"
-        headshotSrc="/me.png?v=2"
+        headshotSrc="/me0.png"
       />
-      <div className="mx-auto max-w-6xl p-6 sm:p-10">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
         <section>
           <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {sampleProjects.map((p) => (
               <ProjectCard key={p.title} {...p} />
             ))}
           </div>
         </section>
 
-        <section className="mt-10">
+        <section className="mt-12 sm:mt-16">
           <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Experience</h2>
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {sampleExperiences.map((e) => (
               <ExperienceCard key={`${e.title}-${e.company}`} {...e} />
             ))}
           </div>
         </section>
 
-        <section className="mt-16">
+        <section className="mt-12 sm:mt-16">
           <AnimatedNav
             items={[
               { label: "Resume", href: "/resume" },

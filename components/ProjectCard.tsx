@@ -13,20 +13,20 @@ export default function ProjectCard({ title, description, tech, imageSrc, href }
   const coverSrc = imageSrc ?? "/projects/placeholder.svg";
   const content = (
     <div className="group relative flex flex-col rounded-2xl border border-black/10 dark:border-white/10 bg-background/60 overflow-hidden hover:shadow-xl transition-shadow">
-      <div className="relative h-40 w-full overflow-hidden">
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
           src={coverSrc}
           alt={title}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
-          sizes="(min-width: 640px) 33vw, 100vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
       </div>
-      <div className="p-5">
-        <h3 className="text-lg font-semibold tracking-tight">{title}</h3>
-        <p className="mt-1 text-sm text-foreground/80">{description}</p>
-        <ul className="mt-3 flex flex-wrap gap-2">
+      <div className="p-4 sm:p-5">
+        <h3 className="text-base sm:text-lg font-semibold tracking-tight leading-tight">{title}</h3>
+        <p className="mt-2 text-sm text-foreground/80 leading-relaxed">{description}</p>
+        <ul className="mt-3 flex flex-wrap gap-1.5 sm:gap-2">
           {tech.map((t) => (
             <li
               key={t}
