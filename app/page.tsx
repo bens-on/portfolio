@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import AnimatedNav from "@/components/AnimatedNav";
 import ProjectCard, { Project } from "@/components/ProjectCard";
 import ExperienceCard, { Experience } from "@/components/ExperienceCard";
+import ScrollAnimations from "@/components/ScrollAnimations";
 
 const sampleProjects: Project[] = [
   {
@@ -88,32 +89,42 @@ export default function Home() {
         headshotSrc="/me0.png"
       />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-        <section>
-          <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
-          <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {sampleProjects.map((p) => (
-              <ProjectCard key={p.title} {...p} />
-            ))}
-          </div>
-        </section>
+        <ScrollAnimations>
+          <section>
+            <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
+            <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+              {sampleProjects.map((p, index) => (
+                <ScrollAnimations key={p.title} delay={index * 100}>
+                  <ProjectCard {...p} />
+                </ScrollAnimations>
+              ))}
+            </div>
+          </section>
+        </ScrollAnimations>
 
-        <section className="mt-12 sm:mt-16">
-          <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Experience</h2>
-          <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {sampleExperiences.map((e) => (
-              <ExperienceCard key={`${e.title}-${e.company}`} {...e} />
-            ))}
-          </div>
-        </section>
+        <ScrollAnimations delay={200}>
+          <section className="mt-12 sm:mt-16">
+            <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Experience</h2>
+            <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+              {sampleExperiences.map((e, index) => (
+                <ScrollAnimations key={`${e.title}-${e.company}`} delay={index * 150}>
+                  <ExperienceCard {...e} />
+                </ScrollAnimations>
+              ))}
+            </div>
+          </section>
+        </ScrollAnimations>
 
-        <section className="mt-12 sm:mt-16">
-          <AnimatedNav
-            items={[
-              { label: "Resume", href: "/resume" },
-              { label: "Contact", href: "/contact" },
-            ]}
-          />
-        </section>
+        <ScrollAnimations delay={400}>
+          <section className="mt-12 sm:mt-16">
+            <AnimatedNav
+              items={[
+                { label: "Resume", href: "/resume" },
+                { label: "Contact", href: "/contact" },
+              ]}
+            />
+          </section>
+        </ScrollAnimations>
       </div>
     </div>
   );

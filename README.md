@@ -25,7 +25,7 @@ Data logging and feedback control system maintaining optimal plant growth condit
 My internship experience spans multiple industries and government agencies:
 
 - **FIRST RF** - Embedded Systems Engineering Intern *(May 2025 - Aug 2025)*
-- **Bureau of Reclamation, DOI** - Electrical Engineering Intern *(May 2024 - Aug 2024)*
+- **Bureau of Reclamation, USDOI** - Electrical Engineering Intern *(May 2024 - Aug 2024)*
 - **Colorado State University** - Learning Assistant *(Aug 2023 - May 2024)*
 - **Woodward** - Electrical Test Engineering Intern *(May 2023 - Aug 2023)*
 - **CSU ECSyD Lab** - Research Assistant *(Dec 2022 - May 2023)*
@@ -57,10 +57,9 @@ Explore the full portfolio to see detailed project breakdowns, technical impleme
 
 ## Development Setup
 
-*For developers interested in running this portfolio locally:*
-
-```bash
+```
+bash
 npm install && npm run dev
 ```
 
-Built with Next.js, TypeScript, and Tailwind CSS. Open [localhost:3000](http://localhost:3000) to view.
+Built with Next.js, TypeScript, and Tailwind CSS.
