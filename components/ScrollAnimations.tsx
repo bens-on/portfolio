@@ -13,10 +13,21 @@ export default function ScrollAnimations({
   className = "",
   delay = 0 
 }: ScrollAnimationsProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Start visible to ensure content renders
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Check if element is already visible on mount
+    if (elementRef.current) {
+      const rect = elementRef.current.getBoundingClientRect();
+      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+      if (isInViewport) {
+        setTimeout(() => {
+          setIsVisible(true);
+        }, delay);
+      }
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -26,8 +37,8 @@ export default function ScrollAnimations({
         }
       },
       { 
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.01,
+        rootMargin: '0px'
       }
     );
 

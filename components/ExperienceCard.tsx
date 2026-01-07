@@ -9,21 +9,22 @@ export type Experience = {
   skills: string[];
   imageSrc?: string;
   href?: string;
+  className?: string;
 };
 
-export default function ExperienceCard({ title, company, duration, description, skills, imageSrc, href }: Experience) {
+export default function ExperienceCard({ title, company, duration, description, skills, imageSrc, href, className }: Experience) {
   const coverSrc = imageSrc ?? "/projects/placeholder.svg";
   const content = (
-    <div className="group relative flex flex-col rounded-2xl border border-black/10 dark:border-white/10 bg-background/60 overflow-hidden hover:shadow-xl transition-shadow">
+    <div className={`group relative flex flex-col rounded-2xl border border-foreground/15 bg-background/60 overflow-hidden hover:shadow-card-hover transition-all duration-normal ease-smooth ${className || ''}`}>
       <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
           src={coverSrc}
           alt={company}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-cover group-hover:scale-105 transition-transform duration-slow ease-smooth"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-card-overlay" />
       </div>
       <div className="p-4 sm:p-5">
         <h3 className="text-base sm:text-lg font-semibold tracking-tight leading-tight">{title}</h3>
@@ -42,7 +43,7 @@ export default function ExperienceCard({ title, company, duration, description, 
         </ul>
       </div>
       {href ? (
-        <div className="absolute right-3 top-3 rounded-full bg-background/70 px-2 py-1 text-xs text-foreground/70 border border-foreground/10">
+        <div className="absolute right-3 top-3 rounded-full bg-background/80 px-2 py-1 text-xs text-foreground/70 border border-foreground/10">
           View
         </div>
       ) : null}
@@ -51,7 +52,7 @@ export default function ExperienceCard({ title, company, duration, description, 
 
   if (href) {
     return (
-      <Link href={href} className="block focus:outline-none focus:ring-2 focus:ring-cyan-400/40 rounded-2xl">
+      <Link href={href} className="block focus:outline-none focus:ring-2 focus:ring-accent-primary/40 rounded-2xl">
         {content}
       </Link>
     );

@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function FirstRFExperiencePage() {
   return (
-    <main className="mx-auto max-w-4xl p-6 sm:p-10">
+    <main className="mx-auto max-w-4xl p-6 sm:p-10 pt-20 sm:pt-24">
       <BackLink />
       
       {/* Header */}
       <div className="mt-8 mb-12">
-        <h1 className="text-3xl font-bold tracking-tight mb-2">FIRST RF</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">FIRST RF</h1>
         <h2 className="text-xl font-semibold text-foreground/80 mb-1">Embedded Systems Engineering Intern</h2>
         <p className="text-foreground/60 mb-4">May 2025 – Aug 2025 | Boulder, CO</p>
         
@@ -37,14 +37,14 @@ export default function FirstRFExperiencePage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-6">
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">Phased Array Communication System</h4>
             <p className="text-foreground/80">
               Co-developed a phased array communication system for military grade platforms.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">PCB Design & Signal Integrity</h4>
             <p className="text-foreground/80">
               Designed multilayer PCB layouts in Altium, performing transmission-line calculations and 
@@ -52,7 +52,7 @@ export default function FirstRFExperiencePage() {
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">Embedded Software Development</h4>
             <p className="text-foreground/80">
               Authored cross-platform SPI drivers in C for Zephyr RTOS to control active RF components.
@@ -87,6 +87,7 @@ export default function FirstRFExperiencePage() {
             <span
               key={skill}
               className="px-3 py-1 bg-foreground/10 text-foreground/80 rounded-full text-sm border border-foreground/20"
+              style={{ borderRadius: 'var(--radius-full)' }}
             >
               {skill}
             </span>

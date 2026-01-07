@@ -2,9 +2,12 @@ import BackLink from "@/components/BackLink";
 
 export default function ResumePage() {
   return (
-    <main className="mx-auto max-w-5xl p-6 sm:p-10">
+    <main className="mx-auto max-w-5xl p-6 sm:p-10 pt-20 sm:pt-24">
+      <div className="mb-4">
+        <BackLink />
+      </div>
       <div className="flex items-baseline justify-between gap-4">
-        <h1 className="text-2xl font-semibold tracking-tight">Resume</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">Resume</h1>
         <a
           href="/resume.pdf"
           className="rounded-lg border border-black/10 dark:border-white/10 px-3 py-1.5 text-sm hover:bg-foreground hover:text-background transition-colors"
@@ -24,8 +27,6 @@ export default function ResumePage() {
           />
         </div>
       </div>
-      
-      <BackLink />
     </main>
   );
 }

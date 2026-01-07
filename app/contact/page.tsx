@@ -2,8 +2,11 @@ import BackLink from "@/components/BackLink";
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-4xl p-6 sm:p-10">
-      <h1 className="text-3xl font-semibold tracking-tight">Contact</h1>
+    <main className="mx-auto max-w-4xl p-6 sm:p-10 pt-20 sm:pt-24">
+      <div className="mb-4">
+        <BackLink />
+      </div>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">Contact</h1>
       <p className="mt-2 text-lg text-foreground/80">
         I&apos;m always interested in new opportunities in embedded systems or RF for aerospace and defense.
       </p>
@@ -150,8 +153,6 @@ export default function ContactPage() {
           </a>
         </div>
       </div>
-
-      <BackLink />
     </main>
   );
 }

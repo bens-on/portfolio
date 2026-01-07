@@ -19,7 +19,7 @@ export default function Hero({ name, title, subtitle, headshotSrc }: HeroProps) 
               <div className="absolute -inset-2 bg-gradient-to-r from-foreground/10 via-foreground/18 to-foreground/10 rounded-full blur-lg opacity-55 group-hover:opacity-75 transition-opacity duration-500 animate-pulse"></div>
               
               {/* Main container with natural blending */}
-              <div className="relative size-full overflow-hidden rounded-full bg-gradient-to-br from-background/80 to-background/60 backdrop-blur-sm border border-foreground/5">
+              <div className="relative size-full overflow-hidden rounded-full bg-gradient-to-br from-background/80 to-background/60 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.15)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
                 {/* Subtle texture overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-foreground/3 to-transparent"></div>
                 

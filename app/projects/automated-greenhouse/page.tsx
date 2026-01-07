@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function AutomatedGreenhousePage() {
   return (
-    <main className="mx-auto max-w-4xl p-6 sm:p-10">
+    <main className="mx-auto max-w-4xl p-6 sm:p-10 pt-20 sm:pt-24">
       <BackLink />
       
       {/* Header */}
       <div className="mt-8 mb-12">
-        <h1 className="text-3xl font-bold tracking-tight mb-2">Automated Greenhouse</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Automated Greenhouse</h1>
         <h2 className="text-xl font-semibold text-foreground/80 mb-1">Vertically Integrated Project (VIP)</h2>
         <p className="text-foreground/60 mb-4">Fall 2024 | Colorado State University</p>
         

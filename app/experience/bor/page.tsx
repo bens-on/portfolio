@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function BORExperiencePage() {
   return (
-    <main className="mx-auto max-w-4xl p-6 sm:p-10">
+    <main className="mx-auto max-w-4xl p-6 sm:p-10 pt-20 sm:pt-24">
       <BackLink />
       
       {/* Header */}
       <div className="mt-8 mb-12">
-        <h1 className="text-3xl font-bold tracking-tight mb-2">Bureau of Reclamation, U.S. Department of the Interior</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Bureau of Reclamation, U.S. Department of the Interior</h1>
         <h2 className="text-xl font-semibold text-foreground/80 mb-1">Electrical Engineering Intern – Power Systems Analysis & Control</h2>
         <p className="text-foreground/60 mb-4">May 2024 – Feb 2025 | Lakewood, CO</p>
         
@@ -37,35 +37,35 @@ export default function BORExperiencePage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-6">
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">Compliance Testing</h4>
             <p className="text-foreground/80">
               Performed WECC and NERC compliance testing on hydropower governor and excitation systems.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">Field Transducer Box Design</h4>
             <p className="text-foreground/80">
               Designed and deployed a field transducer box to process turbine signals for monitoring and testing.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">QNX RTOS Development</h4>
             <p className="text-foreground/80">
               Developed custom C drivers in QNX RTOS for 12-/16-bit Acromag DAC PCIe boards used in governor/excitation controllers.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">Simulink Integration</h4>
             <p className="text-foreground/80">
               Integrated Simulink models for real-time simulation via DAC channels, enabling dynamic testing.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">STM32 SPI Implementation</h4>
             <p className="text-foreground/80">
               Implemented 32-bit SPI protocols on STM32 microcontrollers to interface with DAC boards, 
