@@ -32,7 +32,7 @@ const launchMedia: LaunchMedia[] = [
   {
     id: "me_L1",
     type: "video",
-    src: "/rocket_launch/me_L1.MOV",
+    src: "/rocket_launch/me_L1.mov",
     date: "November 16, 2025",
     location: "Hartsel, CO",
     description: "Video of my L1 rocket, where I successfully got my L1 HPR Certification.",
@@ -88,10 +88,10 @@ export default function LaunchesPage() {
                 <div className="flex flex-col space-y-4">
                   {/* Media Container */}
                   {media.type === "video" ? (
-                    <div className="flex justify-center">
-                      <div className="inline-block bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg border border-foreground/10 overflow-hidden">
+                    <div className="w-full bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg border border-foreground/10 overflow-hidden">
+                      <div className="relative w-full flex items-center justify-center" style={{ aspectRatio: "9/16", minHeight: "400px" }}>
                         <video
-                          className="block max-w-md w-auto h-auto m-0 p-0"
+                          className="block w-full h-full object-contain m-0 p-0"
                           autoPlay
                           loop
                           muted
