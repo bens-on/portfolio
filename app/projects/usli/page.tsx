@@ -46,30 +46,30 @@ export default function USLIPage() {
         <h3 className="text-xl font-semibold mb-6">Key Contributions (Ongoing)</h3>
         <div className="space-y-6">
           <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
+            <h4 className="font-semibold mb-2">Subscale Electronics Design</h4>
+            <p className="text-foreground/80">
+              Designed and implemented subscale payload electronics to capture in-flight sensor data. Integrated data acquisition and onboard logging, storing measurements to a microSD card using an Arduino Nano. Supported proof-of-concept launch to validate payload landing systems and characterize deployment and landing behavior.
+            </p>
+          </div>
+          
+          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">Payload Subsystem Design</h4>
             <p className="text-foreground/80">
-              Designed, built, and tested a subscale payload to collect telemetry during proof-of-concept flight. This launch validates payload landing systems and records deployment/landing data. Responsible for electrical system design, including preliminary schematics for the drill mechanism, power budgets reviewed with industry engineers, and initial hardware testing.
+              Designed, built, and tested a subscale payload for in-flight data collection during validation testing. Developed preliminary electrical schematics for the drill mechanism and defined system-level architecture. Established power budgets and validated them through reviews with industry engineers. Conducted initial hardware testing to verify subsystem performance.
             </p>
           </div>
           
           <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
-            <h4 className="font-semibold mb-2">Subscale Payload Firmware</h4>
+            <h4 className="font-semibold mb-2">Payload Autonomy &amp; Firmware</h4>
             <p className="text-foreground/80">
-              Developed firmware architecture for payload automation, defining communication protocols, GPIO mapping, and control algorithms for autonomous operation.
-            </p>
-          </div>
-          
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
-            <h4 className="font-semibold mb-2">Vehicle Integration</h4>
-            <p className="text-foreground/80">
-              Collaborating with the vehicle team to ensure payload integration preserves rocket stability and performance for the scheduled fall launch.
+              Developed firmware architecture enabling autonomous payload operation. Defined communication protocols, GPIO mapping, and control logic for sensor integration and actuation. Implemented structured data handling for reliable onboard logging and post-flight analysis.
             </p>
           </div>
           
           <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">Project Management</h4>
             <p className="text-foreground/80">
-              Creating Gantt charts, coordinating electrical and mechanical, and ensuring project milestones are met. Provided Git training resources to the programmers on the team to standardize workflow.
+              Developed Gantt charts, coordinated electrical and mechanical efforts, and enforced milestone tracking. Standardized version control practices by introducing Git workflows and training resources for the programming team.
             </p>
           </div>
         </div>
@@ -267,26 +267,33 @@ export default function USLIPage() {
           </div>
         </div>
 
-        {/* CDR Design: MOLEA System */}
+        {/* CDR/FRR Design */}
         <div className="mb-12">
-          <h4 className="text-lg font-medium mb-4 text-foreground/90">CDR Design: MOLEA System</h4>
-          <p className="text-sm text-foreground/70 mb-4">MOLEA stands for Mechanical Operations for Layered Extraction and Analysis. Design as of Critical Design Review (CDR).</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
-                <Image
-                  src="/projects/usli-updates/MOLEA_schematic.png"
-                  alt="MOLEA schematic - newest revision of competition payload"
-                  fill
-                  className="object-contain bg-foreground/5 p-2"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-                  onClick={() => window.open('/projects/usli-updates/MOLEA_schematic.png', '_blank')}
-                />
-              </div>
-              <p className="text-sm text-foreground/60 text-center">Newest revision of the competition payload. This is the brain of the payload. There are other components in the power block, but the specific circuitry we are using is kept private.</p>
+          <h4 className="text-lg font-medium mb-4 text-foreground/90">CDR/FRR Design</h4>
+          <p className="text-sm text-foreground/70 mb-6">
+            Design documentation through Critical Design Review and Flight Readiness Review, plus as-built payload integration and demonstration flight from FRR.
+          </p>
+
+          {/* Competition payload schematic (MOLEA) — full width for readability */}
+          <div className="space-y-2 mb-8">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg cursor-pointer hover:scale-[1.02] transition-transform duration-300">
+              <Image
+                src="/projects/usli-updates/molea_payload_schematic.jpg"
+                alt="MOLEA payload electrical schematic — competition design"
+                fill
+                className="object-contain bg-foreground/5 p-2"
+                sizes="(max-width: 640px) 100vw, 800px"
+                onClick={() => window.open('/projects/usli-updates/molea_payload_schematic.jpg', '_blank')}
+              />
             </div>
+            <p className="text-sm text-foreground/60 text-center">MOLEA Payload Electrical Design (Rev 4.2). Controller, peripherals (IMU, BMP280, RTC, EZO pH), motor control, and power distribution.</p>
+          </div>
+
+          {/* Block diagrams — 2 per row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Electrical block diagram */}
             <div className="space-y-2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300">
                 <Image
                   src="/projects/usli-updates/block_diagram.png"
                   alt="Electrical block diagram for MOLEA system"
@@ -296,21 +303,143 @@ export default function USLIPage() {
                   onClick={() => window.open('/projects/usli-updates/block_diagram.png', '_blank')}
                 />
               </div>
-              <p className="text-sm text-foreground/60 text-center">Electrical block diagram for the MOLEA system</p>
+              <p className="text-sm text-foreground/60 text-center">Electrical block diagram for the MOLEA payload system.</p>
             </div>
-            <div className="space-y-2 md:col-span-2">
-              <div className="relative aspect-[16/9] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+
+            {/* Power architecture block diagram */}
+            <div className="space-y-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg cursor-pointer hover:scale-105 transition-transform duration-300">
                 <Image
                   src="/projects/usli-updates/power_architecture.png"
                   alt="Power architecture block diagram"
                   fill
                   className="object-contain bg-foreground/5 p-2"
-                  sizes="(max-width: 640px) 100vw, 800px"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                   onClick={() => window.open('/projects/usli-updates/power_architecture.png', '_blank')}
                 />
               </div>
-              <p className="text-sm text-foreground/60 text-center">Power architecture block diagram, focused on the power rails</p>
+              <p className="text-sm text-foreground/60 text-center">Power architecture block diagram, focused on the power rails.</p>
             </div>
+          </div>
+
+          {/* FRR: As-built payload and vehicle integration */}
+          <h5 className="text-base font-medium mb-3 text-foreground/85">As-built payload and vehicle integration</h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="space-y-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/projects/usli-updates/frr/DSCF8568.JPG"
+                  alt="As-built payload and vehicle — FRR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  onClick={() => window.open('/projects/usli-updates/frr/DSCF8568.JPG', '_blank')}
+                />
+              </div>
+              <p className="text-sm text-foreground/60 text-center">Electronics being installed for full scale launch.</p>
+            </div>
+            <div className="space-y-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/projects/usli-updates/frr/DSCF8573.JPG"
+                  alt="As-built payload — FRR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  onClick={() => window.open('/projects/usli-updates/frr/DSCF8573.JPG', '_blank')}
+                />
+              </div>
+              <p className="text-sm text-foreground/60 text-center">Getting payload body ready for full scale launch.</p>
+            </div>
+            <div className="space-y-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/projects/usli-updates/frr/DSCF8601.JPG"
+                  alt="Payload and vehicle — FRR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  onClick={() => window.open('/projects/usli-updates/frr/DSCF8601.JPG', '_blank')}
+                />
+              </div>
+              <p className="text-sm text-foreground/60 text-center">Payload / avionics spring being compressed to fit within the rocket body.</p>
+            </div>
+            <div className="space-y-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/projects/usli-updates/frr/DSCF8607.JPG"
+                  alt="Payload integration — FRR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  onClick={() => window.open('/projects/usli-updates/frr/DSCF8607.JPG', '_blank')}
+                />
+              </div>
+              <p className="text-sm text-foreground/60 text-center">Payload section being put in the vehicle body.</p>
+            </div>
+          </div>
+
+          {/* FRR: Payload demonstration flight */}
+          <h5 className="text-base font-medium mb-3 text-foreground/85">Payload demonstration flight</h5>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/projects/usli-updates/frr/DSCF8683.JPG"
+                  alt="Payload demonstration flight — FRR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  onClick={() => window.open('/projects/usli-updates/frr/DSCF8683.JPG', '_blank')}
+                />
+              </div>
+              <p className="text-sm text-foreground/60 text-center">Damage to payload internals after first full scale launch.</p>
+            </div>
+            <div className="space-y-2">
+              <div className="relative aspect-[4/3] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/projects/usli-updates/frr/DSCF8685.JPG"
+                  alt="Demonstration flight — FRR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  onClick={() => window.open('/projects/usli-updates/frr/DSCF8685.JPG', '_blank')}
+                />
+              </div>
+              <p className="text-sm text-foreground/60 text-center">Payload internals after full scale flight.</p>
+            </div>
+            <div className="space-y-2 md:col-span-2">
+              <div className="relative aspect-[16/9] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/projects/usli-updates/frr/IMG_6407.JPG"
+                  alt="Payload demonstration flight — FRR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 800px"
+                  onClick={() => window.open('/projects/usli-updates/frr/IMG_6407.JPG', '_blank')}
+                />
+              </div>
+              <p className="text-sm text-foreground/60 text-center">Payload internals under testing.</p>
+            </div>
+            <div className="space-y-2 md:col-span-2">
+              <div className="relative aspect-[16/9] w-full overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                <Image
+                  src="/projects/usli-updates/frr/IMG_6487.JPG"
+                  alt="Payload demonstration flight — FRR"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, 800px"
+                  onClick={() => window.open('/projects/usli-updates/frr/IMG_6487.JPG', '_blank')}
+                />
+              </div>
+              <p className="text-sm text-foreground/60 text-center">Payload internals under testing.</p>
+            </div>
+          </div>
+
+          {/* Custom PCB Design */}
+          <h5 className="text-base font-medium mb-3 text-foreground/85">Custom PCB Design</h5>
+          <div className="rounded-lg border border-dashed border-foreground/20 bg-foreground/5 p-8 flex flex-col items-center justify-center text-center">
+            <p className="text-foreground/50 text-sm">Coming soon — custom PCB designed for the MOLEA payload system.</p>
           </div>
         </div>
       </section>

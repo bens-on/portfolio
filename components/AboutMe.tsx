@@ -15,7 +15,7 @@ export default function AboutMe() {
               lineHeight: 'var(--body-text-line-height)',
             }}
           >
-            I&apos;m a Senior Electrical Engineering student at Colorado State University in the Accelerated Master&apos;s Program, with an expected MSEE in 2027. My focus areas are embedded systems and RF engineering, with a strong interest in aerospace and defense applications.
+            I&apos;m an incoming Graduate Electrical Engineering Student at Colorado State University, with an expected MSEE in 2027. My focus areas are embedded systems and RF engineering, with a strong interest in aerospace and defense applications.
           </p>
           <p 
             className="text-foreground/80 leading-relaxed"

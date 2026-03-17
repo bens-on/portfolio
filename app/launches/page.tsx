@@ -89,7 +89,7 @@ export default function LaunchesPage() {
                   {/* Media Container */}
                   {media.type === "video" ? (
                     <div className="w-full bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg border border-foreground/10 overflow-hidden">
-                      <div className="relative w-full flex items-center justify-center" style={{ aspectRatio: "9/16", minHeight: "400px" }}>
+                      <div className="relative w-full flex items-center justify-center max-h-[70vh] sm:max-h-none" style={{ aspectRatio: "9/16" }}>
                         <video
                           className="block w-full h-full object-contain m-0 p-0"
                           autoPlay

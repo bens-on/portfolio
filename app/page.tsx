@@ -95,19 +95,19 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           {/* Headshot Image with Name */}
           <ScrollAnimations>
-            <div className="mb-8 sm:mb-12 flex items-center gap-4 sm:gap-6 -mt-2 sm:-mt-3">
-              <div className="w-48 h-48 sm:w-56 sm:h-56 flex-shrink-0">
+            <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 -mt-2 sm:-mt-3">
+              <div className="w-28 h-28 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0">
                 <Image
                   src="/me.png"
                   alt="Alex Benson"
                   width={224}
                   height={224}
                   className="object-contain w-full h-full"
-                  sizes="(max-width: 640px) 192px, 224px"
+                  sizes="(max-width: 640px) 112px, (max-width: 768px) 192px, 224px"
                   priority
                 />
               </div>
-              <h1 className="font-header font-bold tracking-tighter text-[var(--foreground)] leading-none whitespace-nowrap flex-1 h-48 sm:h-56 flex items-center text-[clamp(2rem,10vw,12rem)]">
+              <h1 className="font-header font-bold tracking-tighter text-[var(--foreground)] leading-none flex-1 flex items-center text-[clamp(2rem,10vw,12rem)] sm:h-48 md:h-56">
                 ALEX BENSON
               </h1>
             </div>
@@ -118,13 +118,26 @@ export default function Home() {
             <AboutMe />
           </ScrollAnimations>
 
-          {/* Projects Grid */}
+          {/* Experience Grid */}
           <ScrollAnimations delay={100}>
+            <section className="mt-12 sm:mt-16">
+              <h2 className="font-header text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[var(--foreground)] mb-4 sm:mb-6">Experience</h2>
+              <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+                {sampleExperiences.map((e, index) => (
+                  <ScrollAnimations key={`${e.title}-${e.company}`} delay={index * 150}>
+                    <ExperienceCard {...e} />
+                  </ScrollAnimations>
+                ))}
+              </div>
+            </section>
+          </ScrollAnimations>
+
+          {/* Projects Grid */}
+          <ScrollAnimations delay={200}>
             <section className="mt-12 sm:mt-16">
               <h2 className="font-header text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[var(--foreground)] mb-4 sm:mb-6">Projects</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                 {sampleProjects.map((p, index) => {
-                  // Make Automated Greenhouse span 2 columns
                   const isGreenhouse = p.title === "Automated Greenhouse";
                   return (
                     <ScrollAnimations key={p.title} delay={index * 100}>
@@ -134,19 +147,6 @@ export default function Home() {
                     </ScrollAnimations>
                   );
                 })}
-              </div>
-            </section>
-          </ScrollAnimations>
-
-          <ScrollAnimations delay={200}>
-            <section className="mt-12 sm:mt-16">
-              <h2 className="font-header text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[var(--foreground)] mb-4 sm:mb-6">Experience</h2>
-              <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-                {sampleExperiences.map((e, index) => (
-                  <ScrollAnimations key={`${e.title}-${e.company}`} delay={index * 150}>
-                    <ExperienceCard {...e} />
-                  </ScrollAnimations>
-                ))}
               </div>
             </section>
           </ScrollAnimations>

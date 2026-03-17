@@ -16,7 +16,7 @@ export default function ExperienceCard({ title, company, duration, description, 
   const coverSrc = imageSrc ?? "/projects/placeholder.svg";
   const content = (
     <div className={`group relative flex flex-col rounded-2xl border border-foreground/15 bg-background/60 overflow-hidden hover:shadow-card-hover transition-all duration-normal ease-smooth ${className || ''}`}>
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="relative aspect-[16/9] sm:aspect-[4/3] w-full overflow-hidden">
         <Image
           src={coverSrc}
           alt={company}
@@ -43,7 +43,7 @@ export default function ExperienceCard({ title, company, duration, description, 
         </ul>
       </div>
       {href ? (
-        <div className="absolute right-3 top-3 rounded-full bg-background/80 px-2 py-1 text-xs text-foreground/70 border border-foreground/10">
+        <div className="absolute right-3 top-3 rounded-full bg-background/95 px-2 py-1 text-xs text-white font-medium border border-foreground/15 shadow-sm">
           View
         </div>
       ) : null}
