@@ -10,10 +10,19 @@ export type Project = {
   className?: string;
 };
 
-export default function ProjectCard({ title, description, tech, imageSrc, href, className }: Project) {
+export default function ProjectCard({
+  title,
+  description,
+  tech,
+  imageSrc,
+  href,
+  className,
+}: Project) {
   const coverSrc = imageSrc ?? "/projects/placeholder.svg";
   const content = (
-    <div className={`group relative flex flex-col rounded-2xl border border-foreground/15 bg-background/60 overflow-hidden hover:shadow-card-hover transition-all duration-normal ease-smooth ${className || ''}`}>
+    <div
+      className={`group glass-card relative flex flex-col rounded-2xl ${className || ""}`}
+    >
       <div className="relative aspect-[16/9] sm:aspect-[4/3] w-full overflow-hidden">
         <Image
           src={coverSrc}
@@ -24,14 +33,16 @@ export default function ProjectCard({ title, description, tech, imageSrc, href, 
         />
         <div className="absolute inset-0 bg-gradient-card-overlay" />
       </div>
-      <div className="p-4 sm:p-5">
-        <h3 className="text-base sm:text-lg font-semibold tracking-tight leading-tight">{title}</h3>
+      <div className="relative z-10 p-4 sm:p-5">
+        <h3 className="font-header text-base sm:text-lg font-semibold tracking-tight leading-tight">
+          {title}
+        </h3>
         <p className="mt-2 text-sm text-foreground/80 leading-relaxed">{description}</p>
         <ul className="mt-3 flex flex-wrap gap-1.5 sm:gap-2">
           {tech.map((t) => (
             <li
               key={t}
-              className="text-xs rounded-full border border-foreground/15 px-2 py-0.5 text-foreground/70"
+              className="text-xs rounded-full border border-[var(--glass-border)] bg-white/5 px-2 py-0.5 text-foreground/70"
             >
               {t}
             </li>
@@ -39,7 +50,7 @@ export default function ProjectCard({ title, description, tech, imageSrc, href, 
         </ul>
       </div>
       {href ? (
-        <div className="absolute right-3 top-3 rounded-full bg-background/95 px-2 py-1 text-xs text-white font-medium border border-foreground/15 shadow-sm">
+        <div className="absolute right-3 top-3 z-10 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg-strong)] px-2.5 py-1 text-xs font-medium text-foreground/90 backdrop-blur-md shadow-sm">
           View
         </div>
       ) : null}
@@ -48,12 +59,13 @@ export default function ProjectCard({ title, description, tech, imageSrc, href, 
 
   if (href) {
     return (
-      <Link href={href} className="block focus:outline-none focus:ring-2 focus:ring-accent-primary/40 rounded-2xl">
+      <Link
+        href={href}
+        className="block focus:outline-none focus:ring-2 focus:ring-accent-primary/40 rounded-2xl"
+      >
         {content}
       </Link>
     );
   }
   return content;
 }
-
-

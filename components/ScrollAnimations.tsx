@@ -8,43 +8,46 @@ type ScrollAnimationsProps = {
   delay?: number;
 };
 
-export default function ScrollAnimations({ 
-  children, 
+export default function ScrollAnimations({
+  children,
   className = "",
-  delay = 0 
+  delay = 0,
 }: ScrollAnimationsProps) {
-  const [isVisible, setIsVisible] = useState(true); // Start visible to ensure content renders
+  const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    // Check if element is already visible on mount
-    if (elementRef.current) {
-      const rect = elementRef.current.getBoundingClientRect();
-      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-      if (isInViewport) {
-        setTimeout(() => {
-          setIsVisible(true);
-        }, delay);
-      }
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReduced) {
+      setIsVisible(true);
+      return;
     }
+
+    const reveal = () => {
+      if (hasAnimated.current) return;
+      hasAnimated.current = true;
+      window.setTimeout(() => setIsVisible(true), delay);
+    };
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsVisible(true);
-          }, delay);
+          reveal();
+          observer.disconnect();
         }
       },
-      { 
-        threshold: 0.01,
-        rootMargin: '0px'
+      {
+        threshold: 0.08,
+        rootMargin: "0px 0px -40px 0px",
       }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
+    const node = elementRef.current;
+    if (node) observer.observe(node);
 
     return () => observer.disconnect();
   }, [delay]);
@@ -53,9 +56,7 @@ export default function ScrollAnimations({
     <div
       ref={elementRef}
       className={`transition-all duration-700 ease-out ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-8'
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       } ${className}`}
     >
       {children}

@@ -1,39 +1,30 @@
 export default function AboutMe() {
   return (
-    <section className="w-full mb-12 sm:mb-16" style={{ marginBottom: 'var(--section-spacing-sm)' }}>
-      <div className="w-full rounded-2xl border border-foreground/15 bg-background/60 p-4 sm:p-5 md:p-6 transition-all duration-normal ease-smooth shadow-card hover:shadow-card-hover">
-        <h2 
-          className="font-header font-semibold tracking-tight text-[var(--foreground)] mb-6 sm:mb-7 md:mb-8 text-2xl sm:text-3xl md:text-4xl"
-        >
+    <section className="w-full mb-12 sm:mb-16">
+      <div className="glass-panel w-full rounded-2xl p-5 sm:p-6 md:p-8">
+        <h2 className="relative z-10 font-header font-semibold tracking-tight text-[var(--foreground)] mb-5 sm:mb-6 text-2xl sm:text-3xl md:text-4xl">
           About Me
         </h2>
-        <div className="space-y-4 sm:space-y-5" style={{ gap: 'var(--content-gap-sm)' }}>
-          <p 
-            className="text-foreground/80 leading-relaxed"
-            style={{
-              fontSize: 'var(--body-text-size-sm)',
-              lineHeight: 'var(--body-text-line-height)',
-            }}
-          >
-            I&apos;m an incoming Graduate Electrical Engineering Student at Colorado State University, with an expected MSEE in 2027. My focus areas are embedded systems and RF engineering, with a strong interest in aerospace and defense applications.
+        <div className="relative z-10 space-y-4 sm:space-y-5 text-sm sm:text-base leading-relaxed text-foreground/80">
+          <p>
+            I&apos;m an Electrical Engineering graduate student at Colorado State
+            University focused on embedded systems and AI for real-time sensing
+            and control in aerospace and industrial environments. I completed my
+            B.S. in Electrical Engineering (Aerospace concentration, Mathematics
+            minor) in May 2026 and am pursuing an MSEE expected December 2027.
           </p>
-          <p 
-            className="text-foreground/80 leading-relaxed"
-            style={{
-              fontSize: 'var(--body-text-size-sm)',
-              lineHeight: 'var(--body-text-line-height)',
-            }}
-          >
-            I lead the payload team for CSU&apos;s NASA University Student Launch Initiative, where I&apos;m designing a deployable payload for soil sampling and analysis. The work spans system architecture, embedded firmware, sensor integration, and environmental constraints, with an emphasis on reliability and testability.
+          <p>
+            This summer I&apos;m back at the Bureau of Reclamation as an Electrical
+            Engineering Intern in Power System Analysis &amp; Control. As Payload
+            Team Lead for CSU&apos;s NASA University Student Launch Initiative, I led
+            a nine-person team through design, build, and flight of a deployable
+            soil-sampling payload—and wrote an honors thesis on subsystem
+            integration and reliability in high-power rocket payloads.
           </p>
-          <p 
-            className="text-foreground/80 leading-relaxed"
-            style={{
-              fontSize: 'var(--body-text-size-sm)',
-              lineHeight: 'var(--body-text-line-height)',
-            }}
-          >
-            Through internships at FIRST RF, the Bureau of Reclamation, and Woodward, I&apos;ve worked across RF systems, power systems, and aerospace test engineering. I&apos;m comfortable operating at the boundary between hardware and software—moving from schematics and signal chains to firmware and measurements—and I prioritize the rapid iteration of prototypes to validate designs early and often.
+          <p>
+            Through roles at FIRST RF, BOR, and Woodward, I&apos;ve worked across RF
+            hardware, hydropower controls, and aerospace test engineering. I work
+            best close to the hardware—debugging, designing, coding, and iterating.
           </p>
         </div>
       </div>
