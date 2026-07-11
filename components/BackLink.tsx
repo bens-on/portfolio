@@ -5,13 +5,11 @@ export default function BackLink() {
     <div className="mt-4">
       <Link
         href="/"
-        className="group relative inline-block rounded-xl border border-black/10 dark:border-white/10 bg-background/60 px-4 py-2 overflow-hidden"
+        className="group relative inline-block rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] px-4 py-2 overflow-hidden backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-accent-primary/40"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/0 via-cyan-400/10 to-fuchsia-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-        <span className="relative z-10">← Back </span>
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent-secondary)]/0 via-[var(--accent-primary)]/15 to-[var(--accent-pink)]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+        <span className="relative z-10">← Back</span>
       </Link>
     </div>
   );
 }
-
-
