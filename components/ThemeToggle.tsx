@@ -9,12 +9,12 @@ export default function ThemeToggle() {
   const applyTheme = useCallback((newTheme: "light" | "dark") => {
     const root = document.documentElement;
     if (newTheme === "dark") {
-      root.style.setProperty("--background", "#0a0a0a");
-      root.style.setProperty("--foreground", "#ededed");
+      root.style.setProperty("--background", "#07060f");
+      root.style.setProperty("--foreground", "#f2f0f8");
       root.classList.add("dark");
     } else {
-      root.style.setProperty("--background", "#ffffff");
-      root.style.setProperty("--foreground", "#171717");
+      root.style.setProperty("--background", "#f4f1fb");
+      root.style.setProperty("--foreground", "#1a1528");
       root.classList.remove("dark");
     }
   }, []);
