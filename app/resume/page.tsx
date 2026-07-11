@@ -7,18 +7,20 @@ export default function ResumePage() {
         <BackLink />
       </div>
       <div className="flex items-baseline justify-between gap-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">Resume</h1>
+        <h1 className="font-header text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight">
+          Resume
+        </h1>
         <a
           href="/resume.pdf"
-          className="rounded-lg border border-black/10 dark:border-white/10 px-3 py-1.5 text-sm hover:bg-foreground hover:text-background transition-colors"
+          className="rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] px-3 py-1.5 text-sm backdrop-blur-md hover:bg-[var(--glass-bg-strong)] transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >
           Download PDF
         </a>
       </div>
-      <div className="mt-6 w-full rounded-xl overflow-hidden bg-background/60">
-        <div className="relative bg-gray-900 dark:bg-gray-900">
+      <div className="mt-6 w-full rounded-2xl overflow-hidden border border-[var(--glass-border)] bg-[var(--glass-bg)]">
+        <div className="relative bg-gray-900">
           <iframe
             src="/resume.pdf#view=FitH"
             className="w-full dark:filter dark:invert dark:hue-rotate-180 dark:brightness-90 dark:contrast-110"
@@ -30,5 +32,3 @@ export default function ResumePage() {
     </main>
   );
 }
-
-

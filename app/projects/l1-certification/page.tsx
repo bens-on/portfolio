@@ -11,6 +11,7 @@ export default function L1CertificationPage() {
       {/* Header */}
       <div className="mt-8 mb-12">
         <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Level 1 High Power Rocketry (L1 HPR) Certification</h1>
+        <p className="text-foreground/60 mb-1">National Association of Rocketry (NAR) · Issued Nov 2025</p>
         <p className="text-foreground/60 mb-4">November 16, 2025 | Hartsel, CO</p>
         
         {/* Project Image */}

@@ -13,6 +13,17 @@ export default function USLIPage() {
         <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">NASA University Student Launch Initiative (USLI)</h1>
         <h2 className="text-lg sm:text-xl font-semibold text-foreground/80 mb-1">Payload Team Lead – Senior Design Project</h2>
         <p className="text-foreground/60 mb-4">Fall 2025 – Spring 2026 | Colorado State University</p>
+        <p className="text-sm text-foreground/70 mb-4">
+          Honors thesis:{" "}
+          <a
+            href="https://mountainscholar.org/items/9db27c72-30c4-4fa4-b8dc-ef4e13efe7d2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-primary)] hover:underline"
+          >
+            Subsystem Integration and Reliability in a High-Power Rocket Payload
+          </a>
+        </p>
         
         {/* Project Image */}
         <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-8 bg-gradient-to-br from-background/90 to-background/70 border border-foreground/10">
@@ -31,19 +42,20 @@ export default function USLIPage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-4">Overview</h3>
         <p className="text-foreground/80 leading-relaxed mb-4">
-          Leading an 8-member payload team in CSU&apos;s NASA USLI Senior Design Team. The project involves designing a 
-          deployable payload system to collect and analyze a soil sample during the April 2026 NASA competition in Huntsville, Alabama.
+          As Payload Team Lead for CSU&apos;s NASA USLI Senior Design team, I managed a 9-member multidisciplinary
+          group to design, build, and test a deployable soil collection and pH analysis payload for the 2026
+          NASA competition.
         </p>
         <p className="text-foreground/80 leading-relaxed">
-          Responsibilities include overseeing electrical and firmware development, coordinating with mechanical and vehicle teams, and 
-          managing project timelines to ensure successful integration and testing ahead of the launch. As the only electrical engineer on 
-          the payload team, I&apos;m deeply involved in system design, component selection, and testing to meet mission requirements.
+          I designed and tested payload electronics, coordinated integration with the vehicle team, and managed
+          timeline, deliverables, and cross-team coordination. The work also informed my senior honors thesis on
+          subsystem integration and reliability in a high-power rocket payload.
         </p>
       </section>
 
       {/* Key Contributions */}
       <section className="mb-12">
-        <h3 className="text-xl font-semibold mb-6">Key Contributions (Ongoing)</h3>
+        <h3 className="text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-6">
           <div className="bg-background/40 rounded-lg p-6 border border-foreground/10" style={{ borderRadius: 'var(--radius-lg)', padding: 'var(--spacing-lg)' }}>
             <h4 className="font-semibold mb-2">Subscale Electronics Design</h4>
@@ -79,7 +91,9 @@ export default function USLIPage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-4">Impact</h3>
         <p className="text-foreground/80 leading-relaxed">
-          Advancing toward a fully functional payload system for flight demonstration at the NASA USLI 2026 competition—highlighting integration of mechanical, electrical, and control subsystems in a rigorous aerospace setting. This work contributes to NASA&apos;s mission of fostering student-led innovation in launch vehicle design and advancing technologies relevant to future space exploration.
+          Delivered an integrated payload system spanning mechanical, electrical, and control subsystems in a
+          rigorous aerospace setting—and documented the reliability lessons in an honors thesis. The project
+          contributed to NASA&apos;s USLI mission of fostering student-led innovation in launch vehicle design.
         </p>
       </section>
 
