@@ -36,21 +36,21 @@ export default function AutomatedGreenhousePage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-6">
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Electrical System Redesign</h4>
             <p className="text-foreground/80">
               Evaluated and redesigned the original electrical control system for safety, efficiency, and documentation.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">System Implementation</h4>
             <p className="text-foreground/80">
               Implemented the improved control system in the second iteration of the greenhouse project.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Team Collaboration</h4>
             <p className="text-foreground/80">
               Collaborated with a cross-functional team, contributing 1–3 hours per week throughout the semester.

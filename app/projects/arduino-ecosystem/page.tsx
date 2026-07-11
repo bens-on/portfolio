@@ -36,21 +36,21 @@ export default function ArduinoEcosystemPage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-6">
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Sensor Programming</h4>
             <p className="text-foreground/80">
               Programmed Arduino in C++ to collect accurate environmental data (temperature, humidity, soil moisture) from various sensors.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">I2C Communication</h4>
             <p className="text-foreground/80">
               Implemented I2C communication protocol to transmit sensor data between Arduino and external components.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Real-Time Data Display</h4>
             <p className="text-foreground/80">
               Created a real-time data display system using an LED module to show collected environmental information in a continuous loop.

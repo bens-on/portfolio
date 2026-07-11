@@ -36,21 +36,21 @@ export default function CSULAExperiencePage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-6">
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Lab Sessions & Office Hours</h4>
             <p className="text-foreground/80">
               Led weekly lab sessions and held additional office hours for one-on-one tutoring.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Digital Logic Instruction</h4>
             <p className="text-foreground/80">
               Guided students through combinational and sequential logic design, Boolean algebra, and basic circuit analysis.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">FPGA Implementation Support</h4>
             <p className="text-foreground/80">
               Helped students implement designs using Quartus Prime and FPGA-based tools.

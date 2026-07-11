@@ -36,21 +36,21 @@ export default function CSUResearchExperiencePage() {
       <section className="mb-12">
         <h3 className="text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-6">
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Measurement Automation</h4>
             <p className="text-foreground/80">
               Automated measurement process with Python, isolating chip sectors for targeted testing.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Process Optimization</h4>
             <p className="text-foreground/80">
               Reduced measurement time per chip by 75–90%, significantly increasing lab throughput.
             </p>
           </div>
           
-          <div className="bg-background/40 rounded-lg p-6 border border-foreground/10">
+          <div className="glass-panel rounded-xl p-5 sm:p-6">
             <h4 className="font-semibold mb-2">Research Collaboration</h4>
             <p className="text-foreground/80">
               Collaborated with graduate researchers to validate photonic circuit performance.
