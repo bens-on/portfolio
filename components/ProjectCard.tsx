@@ -39,7 +39,7 @@ export default function ProjectCard({ title, description, tech, imageSrc, href, 
         </ul>
       </div>
       {href ? (
-        <div className="absolute right-3 top-3 rounded-full bg-background/95 px-2 py-1 text-xs text-white font-medium border border-foreground/15 shadow-sm">
+        <div className="absolute right-3 top-3 rounded-full bg-background/95 px-2 py-1 text-xs text-foreground font-medium border border-foreground/15 shadow-sm">
           View
         </div>
       ) : null}

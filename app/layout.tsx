@@ -17,10 +17,22 @@ const inconsolata = Inconsolata({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+function resolveMetadataBase(): URL {
+  const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (productionHost) {
+    return new URL(`https://${productionHost}`);
+  }
+  const vercelHost = process.env.VERCEL_URL;
+  if (vercelHost) {
+    return new URL(`https://${vercelHost}`);
+  }
+  return new URL("http://localhost:3000");
+}
+
 export const metadata: Metadata = {
   title: "Alex Benson – Portfolio",
   description: "Senior Electrical Engineering Student at Colorado State University.",
-  metadataBase: new URL("https://example.com"),
+  metadataBase: resolveMetadataBase(),
   openGraph: {
     title: "Alex Benson – Portfolio",
     description: "Senior Electrical Engineering Student at Colorado State University.",
