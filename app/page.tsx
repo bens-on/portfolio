@@ -95,19 +95,19 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           {/* Headshot Image with Name */}
           <ScrollAnimations>
-            <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 -mt-2 sm:-mt-3">
-              <div className="w-28 h-28 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0">
+            <div className="mb-8 sm:mb-12 flex flex-col md:flex-row items-center gap-4 md:gap-6 -mt-2 sm:-mt-3">
+              <div className="w-28 h-28 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 flex-shrink-0">
                 <Image
                   src="/me.png"
                   alt="Alex Benson"
                   width={224}
                   height={224}
                   className="object-contain w-full h-full"
-                  sizes="(max-width: 640px) 112px, (max-width: 768px) 192px, 224px"
+                  sizes="(max-width: 640px) 112px, (max-width: 768px) 160px, (max-width: 1024px) 192px, 224px"
                   priority
                 />
               </div>
-              <h1 className="font-header font-bold tracking-tighter text-[var(--foreground)] leading-none flex-1 flex items-center text-[clamp(2rem,10vw,12rem)] sm:h-48 md:h-56">
+              <h1 className="font-header font-bold tracking-tighter text-[var(--foreground)] leading-none text-center md:text-left flex-1 flex items-center justify-center md:justify-start min-w-0 text-[clamp(2.25rem,12vw,4.5rem)] md:text-[clamp(2.75rem,8vw,8rem)] lg:text-[clamp(3.5rem,9vw,12rem)] md:h-48 lg:h-56">
                 ALEX BENSON
               </h1>
             </div>
