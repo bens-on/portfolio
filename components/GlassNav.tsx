@@ -74,15 +74,15 @@ export default function GlassNav() {
   return (
     <>
       {/* Desktop nav */}
-      <nav className="hidden md:flex items-center gap-1.5 lg:gap-2.5 flex-nowrap">
+      <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2.5 flex-nowrap">
         {navItems.map((item) => (
           <NavLink key={item.href} item={item} />
         ))}
         <ThemeToggle />
       </nav>
 
-      {/* Mobile nav */}
-      <div className="flex md:hidden items-center gap-2" ref={menuRef}>
+      {/* Mobile / tablet nav */}
+      <div className="relative flex lg:hidden items-center gap-2" ref={menuRef}>
         <ThemeToggle />
         <button
           type="button"
@@ -99,7 +99,7 @@ export default function GlassNav() {
         </button>
 
         {mobileOpen && (
-          <div className="absolute top-full right-0 mt-2 mr-4 flex flex-col gap-1.5 p-3 rounded-2xl border border-black/10 dark:border-white/10 bg-background/90 backdrop-blur-xl shadow-lg z-50 min-w-[160px]">
+          <div className="absolute top-full right-0 mt-2 flex flex-col gap-1.5 p-3 rounded-2xl border border-black/10 dark:border-white/10 bg-background/90 backdrop-blur-xl shadow-lg z-50 min-w-[160px]">
             {navItems.map((item) => (
               <NavLink key={item.href} item={item} onClick={() => setMobileOpen(false)} />
             ))}

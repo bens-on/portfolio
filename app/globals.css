@@ -245,8 +245,12 @@ html.dark {
 
 /* Mobile-specific improvements */
 @media (max-width: 640px) {
-  /* Ensure minimum touch target size */
-  a, button {
+  /* Touch targets for primary controls only — avoid bloating inline links/pills */
+  header a,
+  header button,
+  nav a,
+  nav button,
+  .touch-target {
     min-height: 44px;
     min-width: 44px;
   }

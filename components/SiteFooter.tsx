@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function SiteFooter() {
   return (
     <footer className="mt-16 border-t border-black/10 dark:border-white/10">
-      <div className="mx-auto max-w-6xl p-6 sm:p-10 flex items-center justify-center gap-6">
+      <div className="mx-auto max-w-6xl p-6 sm:p-10 flex flex-wrap items-center justify-center gap-3 sm:gap-6">
         <SocialIcon
           href="https://www.linkedin.com/in/alex-benson-c2226"
           label="LinkedIn"

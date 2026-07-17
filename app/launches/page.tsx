@@ -16,7 +16,7 @@ const launchMedia: LaunchMedia[] = [
   {
     id: "subscale2",
     type: "video",
-    src: "/rocket_launch/subscale2.mov",
+    src: "/rocket_launch/subscale2.mp4",
     date: "January 3, 2026",
     location: "Pueblo, CO",
     description: "This was our second subscale launch. The electronics performed well and we learned a lot from the sensors on board the payload. The payload body suffered minor damages but was deemed reusable. The payload successfully ejected and performed as expected, showing proof of concept for our full scale payload operations.",
@@ -24,7 +24,7 @@ const launchMedia: LaunchMedia[] = [
   {
     id: "subscale1",
     type: "video",
-    src: "/rocket_launch/subscale1.mov",
+    src: "/rocket_launch/subscale1.mp4",
     date: "November 16, 2025",
     location: "Hartsel, CO",
     description: "This was our first subscale launch and we learned a lot about what to improve upon for the second launch. The electronics prototypes shifted as our designs rapidly changed, but we secured the electronics better for the second launch to get more data.",
@@ -32,7 +32,7 @@ const launchMedia: LaunchMedia[] = [
   {
     id: "me_L1",
     type: "video",
-    src: "/rocket_launch/me_L1.mov",
+    src: "/rocket_launch/me_L1.mp4",
     date: "November 16, 2025",
     location: "Hartsel, CO",
     description: "Video of my L1 rocket, where I successfully got my L1 HPR Certification.",
@@ -96,10 +96,9 @@ export default function LaunchesPage() {
                           loop
                           muted
                           playsInline
-                          preload="auto"
+                          preload="metadata"
                           style={{ display: 'block' }}
                         >
-                          <source src={media.src} type="video/quicktime" />
                           <source src={media.src} type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
