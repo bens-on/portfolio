@@ -105,7 +105,7 @@ const sampleExperiences: Experience[] = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden relative">
+    <div className="relative min-h-screen">
       <div className="relative w-full pt-12 sm:pt-14">
         <HeroIdentity />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14 -mt-12 sm:-mt-24 md:-mt-32">

@@ -207,9 +207,12 @@ html.dark {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
+  /* clip avoids the iOS bug where overflow-x:hidden on html/body locks vertical scroll */
+  overflow-x: clip;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -220,8 +223,9 @@ body {
   font-family: var(--font-inconsolata), "Courier New", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
+  min-height: 100%;
 }
 
 h1,
@@ -470,9 +474,5 @@ h6 {
   div {
     word-wrap: break-word;
     overflow-wrap: break-word;
-  }
-
-  body {
-    overflow-x: hidden;
   }
 }

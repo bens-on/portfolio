@@ -3,7 +3,7 @@ import WaveField from "./WaveField";
 
 export default function HeroIdentity() {
   return (
-    <section className="relative w-full overflow-x-hidden pb-20 sm:pb-32 md:pb-40">
+    <section className="relative w-full overflow-x-clip pb-20 sm:pb-32 md:pb-40">
       {/* Waves span hero + bleed zone; mask + canvas fade reveal aurora underneath */}
       <div className="pointer-events-none absolute inset-0 wave-field-fade">
         <WaveField className="h-full w-full" />
@@ -17,14 +17,16 @@ export default function HeroIdentity() {
               className="absolute left-1/2 top-1/2 h-36 w-36 sm:h-52 sm:w-52 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-40 blur-2xl"
               style={{ background: "var(--gradient-aurora)" }}
             />
-            <div className="relative h-36 w-36 sm:h-52 sm:w-52 md:h-60 md:w-60">
+            <div className="relative h-36 w-36 sm:h-52 sm:w-52 md:h-60 md:w-60 overflow-hidden">
               <Image
                 src="/me.png"
                 alt="Alex Benson"
                 fill
-                className="object-contain object-center"
+                className="object-contain object-bottom"
                 sizes="(max-width: 640px) 144px, (max-width: 768px) 208px, 240px"
                 priority
+                unoptimized
+                style={{ backgroundColor: "transparent" }}
               />
             </div>
           </div>
