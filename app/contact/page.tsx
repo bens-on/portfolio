@@ -10,7 +10,7 @@ export default function ContactPage() {
         Contact
       </h1>
       <p className="mt-2 text-lg text-foreground/80">
-        Always interested in opportunities in embedded systems, AI for sensing and
+        Always interested in new opportunities in embedded systems, AI for sensing and
         control, and RF for aerospace and defense.
       </p>
 
@@ -35,9 +35,7 @@ export default function ContactPage() {
               <h3 className="font-medium text-foreground">Focus</h3>
               <p className="text-sm text-foreground/80">Embedded Systems &amp; AI</p>
               <p className="text-sm text-foreground/80">RF / Radar Engineering</p>
-              <p className="text-sm text-foreground/80">
-                EE Intern, Bureau of Reclamation (Summer 2026)
-              </p>
+              <p className="text-sm text-foreground/80">Aerospace &amp; Defense</p>
             </div>
 
             <div>

@@ -2,7 +2,7 @@ import AboutMe from "@/components/AboutMe";
 import ProjectCard, { Project } from "@/components/ProjectCard";
 import ExperienceCard, { Experience } from "@/components/ExperienceCard";
 import ScrollAnimations from "@/components/ScrollAnimations";
-import Image from "next/image";
+import HeroIdentity from "@/components/HeroIdentity";
 
 const sampleProjects: Project[] = [
   {
@@ -69,7 +69,7 @@ const sampleExperiences: Experience[] = [
       "WECC/NERC governor compliance testing, field transducer design, QNX DAC drivers with Simulink injection, and STM32 SPI for ±10V 3-phase measurement.",
     skills: ["QNX RTOS", "STM32", "C/C++", "Power Systems"],
     imageSrc: "/projects/BOR-main.jpeg",
-    href: "/experience/bor",
+    href: "/experience/bor-2024",
   },
   {
     title: "Colorado State University",
@@ -106,49 +106,15 @@ const sampleExperiences: Experience[] = [
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden relative">
-      <div className="relative w-full pt-14 sm:pt-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-          <ScrollAnimations>
-            <section className="mb-10 sm:mb-14 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
-              <div className="relative flex-shrink-0">
-                <div
-                  className="absolute -inset-1 rounded-full opacity-80 blur-md"
-                  style={{ background: "var(--gradient-aurora)" }}
-                  aria-hidden
-                />
-                <div className="relative w-28 h-28 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full p-[3px] bg-gradient-to-br from-[var(--accent-tertiary)] via-[var(--accent-primary)] to-[var(--accent-pink)] shadow-glow-aurora">
-                  <div className="relative w-full h-full rounded-full overflow-hidden border border-white/20 bg-[var(--background)]">
-                    <Image
-                      src="/me.png"
-                      alt="Alex Benson"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 112px, (max-width: 768px) 176px, 208px"
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="flex-1 text-center sm:text-left">
-                <p className="font-body text-xs sm:text-sm uppercase tracking-[0.2em] text-foreground/55 mb-2 sm:mb-3">
-                  Portfolio
-                </p>
-                <h1 className="font-header font-bold tracking-tighter leading-none text-[clamp(2.4rem,9vw,7.5rem)] text-gradient-aurora">
-                  ALEX BENSON
-                </h1>
-                <p className="mt-3 sm:mt-4 font-body text-sm sm:text-base md:text-lg text-foreground/75 max-w-xl mx-auto sm:mx-0">
-                  MSEE student · Embedded Systems &amp; AI · Aerospace
-                </p>
-              </div>
-            </section>
-          </ScrollAnimations>
-
+      <div className="relative w-full pt-12 sm:pt-14">
+        <HeroIdentity />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14 -mt-12 sm:-mt-24 md:-mt-32">
           <ScrollAnimations delay={80}>
             <AboutMe />
           </ScrollAnimations>
 
           <ScrollAnimations delay={120}>
-            <section className="mt-10 sm:mt-14">
+            <section id="experience" className="mt-10 sm:mt-14 scroll-mt-24">
               <h2 className="font-header text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[var(--foreground)] mb-4 sm:mb-6">
                 Experience
               </h2>

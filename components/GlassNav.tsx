@@ -84,12 +84,12 @@ export default function GlassNav() {
         <ThemeToggle />
       </nav>
 
-      <div className="flex md:hidden items-center gap-2" ref={menuRef}>
+      <div className="relative flex md:hidden items-center gap-2 shrink-0" ref={menuRef}>
         <ThemeToggle />
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="relative inline-flex items-center justify-center w-10 h-10 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-accent-primary/40"
+          className="relative inline-flex items-center justify-center min-h-11 min-w-11 w-11 h-11 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-accent-primary/40"
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
         >
@@ -113,7 +113,7 @@ export default function GlassNav() {
         </button>
 
         {mobileOpen && (
-          <div className="absolute top-full right-0 mt-2 mr-4 flex flex-col gap-1.5 p-3 rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-bg-strong)] backdrop-blur-xl shadow-lg z-50 min-w-[160px]">
+          <div className="absolute top-full right-0 mt-2 flex flex-col gap-1.5 p-3 rounded-2xl border border-[var(--glass-border)] bg-[var(--glass-bg-strong)] backdrop-blur-xl shadow-lg z-50 min-w-[168px] max-w-[calc(100vw-2rem)]">
             {navItems.map((item) => (
               <NavLink
                 key={item.href}

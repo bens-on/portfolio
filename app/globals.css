@@ -396,9 +396,33 @@ h6 {
   animation: sheen-sweep 0.9s var(--ease-out) forwards;
 }
 
+.wave-field-fade {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.25) 6%,
+    black 20%,
+    black 45%,
+    rgba(0, 0, 0, 0.55) 62%,
+    rgba(0, 0, 0, 0.15) 78%,
+    transparent 92%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.25) 6%,
+    black 20%,
+    black 45%,
+    rgba(0, 0, 0, 0.55) 62%,
+    rgba(0, 0, 0, 0.15) 78%,
+    transparent 92%
+  );
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
 }
+
 
 .animation-delay-200 {
   animation-delay: 0.2s;

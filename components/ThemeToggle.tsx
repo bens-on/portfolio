@@ -106,7 +106,7 @@ export default function ThemeToggle() {
     return (
       <button
         type="button"
-        className="group relative inline-flex items-center justify-center rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] px-4 py-2 overflow-hidden backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-accent-primary/40 text-foreground/80"
+        className="group relative inline-flex items-center justify-center min-h-11 min-w-11 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] px-4 py-2 overflow-hidden backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-accent-primary/40 text-foreground/80"
         aria-label="Toggle theme"
         disabled
       >
@@ -135,7 +135,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="group relative inline-flex items-center justify-center rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] px-4 py-2 overflow-hidden backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-accent-primary/40 text-foreground/80"
+      className="group relative inline-flex items-center justify-center min-h-11 min-w-11 rounded-xl border border-[var(--glass-border)] bg-[var(--glass-bg)] px-4 py-2 overflow-hidden backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-accent-primary/40 text-foreground/80"
       aria-label="Toggle theme"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent-secondary)]/0 via-[var(--accent-primary)]/15 to-[var(--accent-pink)]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />

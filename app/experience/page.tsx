@@ -32,7 +32,7 @@ const experiences: Experience[] = [
       "WECC/NERC governor compliance testing, field transducer design, QNX DAC drivers with Simulink injection, and STM32 SPI for ±10V 3-phase measurement.",
     skills: ["QNX RTOS", "STM32", "C/C++", "Power Systems"],
     imageSrc: "/projects/BOR-main.jpeg",
-    href: "/experience/bor",
+    href: "/experience/bor-2024",
   },
   {
     title: "Colorado State University",

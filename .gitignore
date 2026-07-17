@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local headshot scratch / originals (keep public/me.png for deploy)
+/public/me.backup.png
+/public/me.checkerboard-bad.png
+/public/me-cutout.png
+/public/me.original.png
