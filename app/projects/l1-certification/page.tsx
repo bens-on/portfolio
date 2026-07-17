@@ -70,11 +70,10 @@ export default function L1CertificationPage() {
               loop
               muted
               playsInline
-              preload="auto"
+              preload="metadata"
               style={{ display: 'block' }}
             >
-              <source src="/rocket_launch/me_L1.mov" type="video/quicktime" />
-              <source src="/rocket_launch/me_L1.mov" type="video/mp4" />
+              <source src="/rocket_launch/me_L1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
