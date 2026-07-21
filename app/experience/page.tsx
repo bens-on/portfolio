@@ -8,8 +8,8 @@ const experiences: Experience[] = [
     company: "Electrical Engineering Intern",
     duration: "May 2026 – Present",
     description:
-      "Returning to the Power System Analysis & Control group supporting hydropower governor and excitation systems, embedded controls, and field instrumentation.",
-    skills: ["Power Systems", "Embedded Systems", "Controls", "Hydropower"],
+      "Building QNX drivers for NI PCIe DAQ hardware on an SEL-3355 digital exciter platform, plus the plant HMI that will deploy across western U.S. hydropower plants.",
+    skills: ["QNX RTOS", "Driver Development", "HMI", "DAQ"],
     imageSrc: "/projects/BOR-main.jpeg",
     href: "/experience/bor",
     current: true,
@@ -20,8 +20,9 @@ const experiences: Experience[] = [
     duration: "May 2025 – Aug 2025",
     description:
       "Co-developed a half-duplex phased array for land and maritime connectivity—Altium RF PCB design, Zephyr SPI drivers, and S-parameter validation automation.",
-    skills: ["Zephyr RTOS", "Altium", "Phased Arrays", "S-parameters"],
+    skills: ["Zephyr RTOS", "Altium", "Phased Arrays", "RF Validation"],
     imageSrc: "/projects/FRF-main.jpeg",
+    imageContain: true,
     href: "/experience/first-rf",
   },
   {

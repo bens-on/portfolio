@@ -90,7 +90,7 @@ export default function FirstRFExperiencePage() {
             "Altium",
             "Zephyr RTOS",
             "SPI",
-            "S-parameters",
+            "RF Validation",
             "Phased Arrays",
             "Python",
           ].map((skill) => (

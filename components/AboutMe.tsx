@@ -15,18 +15,16 @@ export default function AboutMe() {
           </p>
           <p>
             This summer I&apos;m back at the Bureau of Reclamation as an Electrical
-            Engineering Intern in Power System Analysis &amp; Control. I&apos;m doing
-            QNX RTOS development for the next generation of digital hydropower
-            controllers that will be in every power plant across the West. As
-            Payload Team Lead for CSU&apos;s NASA University Student Launch
-            Initiative, I led a nine-person team through design, build, and flight
-            of a deployable soil-sampling payload—and wrote an honors thesis on
-            subsystem integration and reliability in high-power rocket payloads.
+            Engineering Intern in Power System Analysis &amp; Control, continuing
+            to develop the next generation of digital control for hydropower
+            turbines. I will be continuing in this role throughout my masters
+            degree.
           </p>
           <p>
             Through roles at FIRST RF, BOR, and Woodward, I&apos;ve worked across RF
             hardware, hydropower controls, and aerospace test engineering. I work
-            best close to the hardware—debugging, designing, coding, and iterating.
+            best close to the hardware: debugging, designing, coding, and
+            iterating.
           </p>
         </div>
       </div>
