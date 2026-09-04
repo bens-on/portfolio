@@ -15,6 +15,17 @@ const experiences: Experience[] = [
     current: true,
   },
   {
+    title: "Colorado State University",
+    company: "Graduate Teaching Assistant",
+    duration: "Aug 2026 – Present",
+    description:
+      "Lead three ECE205 Analog Circuits lab sections, host weekly office hours, and support students through circuit analysis and lab work.",
+    skills: ["Analog Circuits", "Lab Instruction", "Teaching"],
+    imageSrc: "/projects/CSU-main.jpeg",
+    href: "/experience/csu-gta",
+    current: true,
+  },
+  {
     title: "FIRST RF",
     company: "Embedded Systems Engineering Intern",
     duration: "May 2025 – Aug 2025",

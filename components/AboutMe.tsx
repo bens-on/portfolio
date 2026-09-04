@@ -7,24 +7,41 @@ export default function AboutMe() {
         </h2>
         <div className="relative z-10 space-y-4 sm:space-y-5 text-sm sm:text-base leading-relaxed text-foreground/80">
           <p>
-            I&apos;m an Electrical Engineering graduate student at Colorado State
-            University focused on embedded systems and AI for real-time sensing
-            and control in aerospace and industrial environments. I completed my
-            B.S. in Electrical Engineering (Aerospace concentration, Mathematics
-            minor) in May 2026 and am pursuing an MSEE expected December 2027.
+            I&apos;m an Electrical Engineering graduate student at Colorado State,
+            working at the layer where firmware, analog hardware, and real-time
+            control have to agree. I finished my B.S. in May 2026 (Aerospace
+            concentration, Mathematics minor) and I&apos;m pursuing an MSEE focused
+            on embedded systems. During the school year I&apos;m a Graduate Teaching
+            Assistant for ECE205 Analog Circuits, leading three lab sections and
+            weekly office hours — a useful reminder that if you can&apos;t explain a
+            loop or a bias point, you don&apos;t actually understand it.
           </p>
           <p>
-            This summer I&apos;m back at the Bureau of Reclamation as an Electrical
-            Engineering Intern in Power System Analysis &amp; Control, continuing
-            to develop the next generation of digital control for hydropower
-            turbines. I will be continuing in this role throughout my masters
-            degree.
+            At the Bureau of Reclamation I work on the next digital excitation
+            system for hydropower plants across the West: QNX device drivers for
+            NI PCIe DAQ hardware, Simulink exciter models on an SEL-3355 target,
+            and the HMI operators will use in the plant. I was on-site this
+            summer and stay on the project remotely through the school year. The
+            interesting part is the unglamorous part — register maps, HIL racks,
+            and a controller that has to be right when it ships.
           </p>
           <p>
-            Through roles at FIRST RF, BOR, and Woodward, I&apos;ve worked across RF
-            hardware, hydropower controls, and aerospace test engineering. I work
-            best close to the hardware: debugging, designing, coding, and
-            iterating.
+            Before that I interned at FIRST RF on a half-duplex phased array:
+            multilayer RF boards in Altium, Zephyr SPI drivers, and S-parameter
+            scripts so we weren&apos;t validating passives by hand. An earlier BOR
+            tour put me on the same governor and exciter family — WECC/NERC
+            testing, a field transducer I designed, and STM32/QNX firmware to
+            bring plant signals into the controller. Woodward was my first look
+            at aerospace DAQ and test, including a Python analysis tool that
+            replaced a DIAdem workflow.
+          </p>
+          <p>
+            On campus I led the nine-person Payload Team for CSU&apos;s NASA USLI
+            rocket and did SURE research in the ECSyD lab, automating photonic
+            chip measurements so we weren&apos;t parked on a probe station all
+            afternoon. I do my best work when I can put a scope on the problem,
+            change the thing that&apos;s actually wrong, and keep going until the
+            system behaves.
           </p>
         </div>
       </div>
