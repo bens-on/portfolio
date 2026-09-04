@@ -3,6 +3,8 @@ import ProjectCard, { Project } from "@/components/ProjectCard";
 import ExperienceCard, { Experience } from "@/components/ExperienceCard";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import HeroIdentity from "@/components/HeroIdentity";
+import Link from "next/link";
+import { currentMastersCourses } from "@/data/masters";
 
 const sampleProjects: Project[] = [
   {
@@ -137,6 +139,29 @@ export default function Home() {
                     delay={index * 80}
                   >
                     <ExperienceCard {...e} />
+                  </ScrollAnimations>
+                ))}
+              </div>
+            </section>
+          </ScrollAnimations>
+
+          <ScrollAnimations delay={140}>
+            <section id="masters" className="mt-12 sm:mt-16 scroll-mt-24">
+              <div className="mb-4 sm:mb-6 flex flex-wrap items-end justify-between gap-3">
+                <h2 className="font-header text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[var(--foreground)]">
+                  Masters Portfolio
+                </h2>
+                <Link
+                  href="/masters"
+                  className="text-sm text-[var(--accent-primary-light)] underline underline-offset-2 hover:text-[var(--accent-primary)]"
+                >
+                  All semesters
+                </Link>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+                {currentMastersCourses.map((course, index) => (
+                  <ScrollAnimations key={course.title} delay={index * 80}>
+                    <ExperienceCard {...course} />
                   </ScrollAnimations>
                 ))}
               </div>

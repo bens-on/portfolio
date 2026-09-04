@@ -11,6 +11,7 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
+  { label: "Masters", href: "/masters" },
   { label: "Resume", href: "/resume" },
   { label: "Contact", href: "/contact" },
   {

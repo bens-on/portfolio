@@ -1,3 +1,4 @@
+import CourseBanner, { type CourseMotif } from "@/components/CourseBanner";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,6 +10,7 @@ export type Experience = {
   skills: string[];
   imageSrc?: string;
   imageContain?: boolean;
+  motif?: CourseMotif;
   href?: string;
   className?: string;
   current?: boolean;
@@ -22,6 +24,7 @@ export default function ExperienceCard({
   skills,
   imageSrc,
   imageContain,
+  motif,
   href,
   className,
   current,
@@ -36,18 +39,26 @@ export default function ExperienceCard({
           imageContain ? "bg-[#0B121E]" : ""
         }`}
       >
-        <Image
-          src={coverSrc}
-          alt={company}
-          fill
-          className={`${
-            imageContain
-              ? "object-contain p-6 sm:p-8 group-hover:scale-[1.02]"
-              : "object-cover group-hover:scale-105"
-          } transition-transform duration-slow ease-smooth`}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-        <div className="absolute inset-0 bg-gradient-card-overlay" />
+        {motif ? (
+          <div className="h-full w-full origin-center transition-transform duration-slow ease-smooth group-hover:scale-105">
+            <CourseBanner motif={motif} compact />
+          </div>
+        ) : (
+          <>
+            <Image
+              src={coverSrc}
+              alt={company}
+              fill
+              className={`${
+                imageContain
+                  ? "object-contain p-6 sm:p-8 group-hover:scale-[1.02]"
+                  : "object-cover group-hover:scale-105"
+              } transition-transform duration-slow ease-smooth`}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-card-overlay" />
+          </>
+        )}
         {current ? (
           <span className="absolute left-3 top-3 z-10 rounded-full border border-[var(--accent-primary)]/40 bg-[var(--accent-primary)]/20 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-[var(--accent-primary-light)] backdrop-blur-md">
             Current

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutMe() {
   return (
     <section className="w-full mb-12 sm:mb-16">
@@ -11,7 +13,15 @@ export default function AboutMe() {
             working at the layer where firmware, analog hardware, and real-time
             control have to agree. I finished my B.S. in May 2026 (Aerospace
             concentration, Mathematics minor) and I&apos;m pursuing an MSEE focused
-            on embedded systems. During the school year I&apos;m a Graduate Teaching
+            on embedded systems. I keep a{" "}
+            <Link
+              href="/masters"
+              className="text-[var(--accent-primary-light)] underline underline-offset-2 hover:text-[var(--accent-primary)]"
+            >
+              Masters Portfolio
+            </Link>{" "}
+            of the courses I&apos;m taking and what I&apos;m learning in them.
+            During the school year I&apos;m a Graduate Teaching
             Assistant for ECE205 Analog Circuits, leading three lab sections and
             weekly office hours — a useful reminder that if you can&apos;t explain a
             loop or a bias point, you don&apos;t actually understand it.

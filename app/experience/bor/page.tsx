@@ -103,22 +103,23 @@ export default function BORExperiencePage() {
       <section className="mb-12">
         <h3 className="font-header text-xl font-semibold mb-6">Key Contributions</h3>
         <div className="space-y-4">
-          <GlassBlock title="NI PCIe 6353 QNX Driver">
-            Built the QNX RTOS device driver for the NI PCIe 6353 (and the
-            foundation for additional DAQ boards) so the SEL-3355 can exchange
-            I/O with multifunction DAQ hardware through register-level and PCIe
-            memory interfaces.
+          <GlassBlock title="NI PCIe DAQ QNX Drivers">
+            Built QNX RTOS device drivers for the NI PCIe-6353 and NI PCIe-6259
+            multifunction DAQ boards so target machines can exchange analog and
+            digital I/O with the digital exciter path through register-level and
+            PCIe memory interfaces.
           </GlassBlock>
           <GlassBlock title="Digital Exciter Platform">
-            Contribute to digital excitation system controller software that
-            compiles to the SEL-3355 under QNX, including resource managers for
-            TCP, board I/O, logging, and an embedded Simulink exciter harness
-            used for simulation and validation.
+            Contribute to digital excitation system controller software and
+            custom QNX images for multiple industrial targets—the SEL-3355 plus
+            three other machines—including resource managers for TCP, board I/O,
+            logging, and an embedded Simulink exciter harness used for
+            simulation and validation.
           </GlassBlock>
           <GlassBlock title="HMI Design">
-            Designed the plant HMI as a TCP client to the controller stream, and
-            implemented multiple HMI processes that will ship with the system to
-            western U.S. power plants.
+            Designed the plant HMI in Visual Basic as a TCP client to the
+            controller stream, and implemented multiple HMI processes that will
+            ship with the system to western U.S. power plants.
           </GlassBlock>
           <GlassBlock title="Hardware-in-the-Loop Validation">
             Support HIL testing for digital controller exciter model
@@ -157,6 +158,21 @@ export default function BORExperiencePage() {
 
       <section className="mb-12">
         <h3 className="font-header text-xl font-semibold mb-6">Experience Photos</h3>
+        <div className="mb-6 space-y-2">
+          <div className="relative w-full aspect-[16/10] max-h-[28rem] rounded-xl overflow-hidden border border-[var(--glass-border)]">
+            <Image
+              src="/projects/bor-2026/posterSymposium.jpg"
+              alt="Poster symposium demonstrating a standalone power-plant setup at the digital exciter cabinet controller"
+              fill
+              className="object-cover object-[center_35%]"
+              sizes="(max-width: 896px) 100vw, 896px"
+            />
+          </div>
+          <p className="text-sm text-foreground/60 text-center">
+            Poster symposium demo of a standalone power-plant setup at the
+            digital exciter cabinet controller I developed.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {photos.map((photo) => (
             <div key={photo.src} className="space-y-2">
